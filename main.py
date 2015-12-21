@@ -6,10 +6,16 @@
 #print out the new string
 
 def rovarspraket(s):
-    newstr
+    newstr = ''
     for c in s:
         if c.isalpha():
-            if c in ('a', 'e', 'i', 'o', 'u',' ','y'): 
+            if c in ('a', 'e', 'i', 'o', 'u','y'): 
                 newstr+= c
             else:
-                newstr+= c +'o' + c
+                newstr+= c +'o' + c.lower()
+        else:
+            newstr+=c
+    return newstr
+print 'Hello', rovarspraket('Hello')
+while True:
+    print rovarspraket(str(raw_input('Enter the string:')))
